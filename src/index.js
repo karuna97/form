@@ -14,46 +14,59 @@ export const Header = () => {
   return (
     <div
       style={{
-        backgroundColor: "#8D19FFB2",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: "#5375E2",
         width: "1440px",
-        height: "196px",
+        display:"Block",
       }}
     >
       <TextComponent
-        label="INCRESCO TECHNOLOGIES"
+        label="SRI KRISHNA COLLEGE OF ENGINEERING AND TECHNOLOGY"
         styleProps={{
-          alignItems: "center",
-
-          fontSize: "48px",
+          fontSize: "16px",
           fontStyle: "normal",
           fontWeight: "700",
-          fontVariant: "Helvetica",
-          textAlign: "center",
-
-          color: "#FFFFFF",
+          fontVariant: "Nunito-sans",
+          lineHeight:"22px",
+           color: "#FFFFFF",
         }}
       />
       <br></br>
       <TextComponent
-        label="CAMPUS HIRING-2023"
+        label="Exam Scheduler"
         styleProps={{
           left: "500px",
           //top:"110px",
-          lineHeight: "41px",
-          fontSize: "36px",
+          lineHeight: "44px",
+          fontSize: "32px",
           fontStyle: "normal",
-          textAlign: "center",
           fontWeight: "700",
-          fontVariant: "Helvetica",
+          fontVariant: "Nunito",
           color: "#FFFFFF",
           paddingTop: "10px",
         }}
       />
+      <TextComponent
+        label="Waseem"
+        styleProps={{
+          left: "500px",
+          //top:"110px",
+          lineHeight: "27px",
+          fontSize: "20px",
+          fontStyle: "normal",
+          fontWeight: "700",
+          textAlign:"right",
+          top:"34.81",
+          fontVariant: "Nunito",
+          color: "#FFFFFF",
+          paddingTop: "10px",
+        }}
+      />
+
+
     </div>
   );
 };
+
 
 const Attatchments = () => {
   return (
