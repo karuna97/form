@@ -12,8 +12,9 @@ export async function getServerSideProps() {
   let data2=[{displayText:'Something',value:'Something'}]
   let data3=[{displayText:'Something',value:'Something'}]
   let data=[data1,data2,data3]
+  let basicurl="https://0uvw9gcxq2.execute-api.ap-south-1.amazonaws.com/qa/v1"
   //let data4=[]
-  
+
   try{
   const res1 = await fetch(
     `https://0uvw9gcxq2.execute-api.ap-south-1.amazonaws.com/qa/v1/education?role=softwaredeveloper`
