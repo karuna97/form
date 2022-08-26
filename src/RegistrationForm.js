@@ -1,6 +1,6 @@
 import React,{useState}  from 'react'
-import { Button } from 'src/Button'
-import { Header } from "src/Header";
+//import { Button } from 'src/Button'
+//import { Header } from "src/Header";
 
  export const RegistrationForm=()=>{
 

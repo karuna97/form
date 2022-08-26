@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 import {
   TextComponent,
   InputComponent,
   Box,
   DatePick,
   Dropdown,
-  Dropdown1,
+  
   Dropdown11
 } from "./components";
 
@@ -168,9 +168,6 @@ export const App = ({data}) => {
       }
       />
         </Box>
-      
-
-        
         <Box header="Personal Details">
           <InputComponent
             type="text"
@@ -266,6 +263,7 @@ export const App = ({data}) => {
           <InputComponent
             type="text"
             style={{ height: "2em" }}
+            pattern="[0-9]+"
             label={
               <TextComponent
                 label="Contact Number"
@@ -278,7 +276,9 @@ export const App = ({data}) => {
                 }}
               />
             }
-            placeholder="Enter the Contact Number"
+            placeholder="123456789"
+            maxlength="10"
+            minlength="10"
             value={contactNumber}
             onChange={(a) => {
               console.log(a.target.value);

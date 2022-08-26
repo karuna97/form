@@ -12,6 +12,8 @@ export async function getServerSideProps() {
   let data2=[{displayText:'Something',value:'Something'}]
   let data3=[{displayText:'Something',value:'Something'}]
   let data=[data1,data2,data3]
+  //let data4=[]
+  
   try{
   const res1 = await fetch(
     `https://0uvw9gcxq2.execute-api.ap-south-1.amazonaws.com/qa/v1/education?role=softwaredeveloper`
@@ -29,16 +31,27 @@ export async function getServerSideProps() {
             data3 = await res3.json();
             data=[data1,data2,data3]
 
+            const response = await fetch(url, {
+              method: 'POST', // *GET, POST, PUT, DELETE, etc.
+              mode: 'cors', // no-cors, *cors, same-origin
+              cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+              credentials: 'same-origin', // include, *same-origin, omit
+              headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
+              redirect: 'follow', // manual, *follow, error
+              referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+              body: JSON.stringify(data) // body data type must match "Content-Type" header
+            });
+            console.log({data})
+            return response.json(); // parses JSON response into native JavaScript objects
+          }
+  
 
 
-            const res4 = await fetch(
-            'https://0uvw9gcxq2.execute-api.ap-south-1.amazonaws.com/qa/v1/uploadresume'
-            );
-            data4 = await res4.json();
-            data=[data1,data2,data3]
 
-
-        }catch(error){}
+        catch(error){}
 
    //console.log({ data });
 
